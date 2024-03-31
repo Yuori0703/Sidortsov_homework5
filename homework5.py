@@ -144,39 +144,13 @@ def rope_product(n):
         return 3 * rope_product(n - 3)
     return n
 
-# # rope_product(1) -> 1
-# # rope_product(4) -> 4
-# # rope_product(5) -> 6
-# # rope_product(6) -> 9
-# # rope_product(7) -> 12
-# # rope_product(11) -> 54
+# rope_product(1) -> 1
+# rope_product(4) -> 4
+# rope_product(5) -> 6
+# rope_product(6) -> 9
+# rope_product(7) -> 12
+# rope_product(11) -> 54
 # @handle_multiples
 # def rope_product(n):
 #     return
 
-# # создаем декоратор 
-# def handle_multiples(func):
-#     def wrapper(*args):
-# # проверяем условие если декорируемая функция вызывается с одним аргументом
-#         if len(args) == 1:
-# # то декоратор вызывает функцию и возвращает результат
-#             return func(args[0])
-# # еcли декорируемая функция вызывается с несколькими аргументами
-#         else:
-# # то применяем ф-цию map для перебора всех значений args и приобразуем к списку
-#             return list(map(func, args))
-#     return wrapper
-# # используем декоратор к функции rope_product
-# @handle_multiples
-# def rope_product(n):
-# # проверяем условие что n не меньше 4 в противном случае возвращаем n, так веревка меньше чем на 3 не режется
-#     if n < 4:
-#         return n
-# # проверяем условие что n больше 4 
-#     elif n > 4:
-# # используем рекурсивную функцию, так как по условию задачи цикл применять нельзя
-# # вызываем функцию rope_product с новым аргументом n - 3 что соответствует разрезанию веревки длиной n на часть длиной 3 и остаток длиной n - 3
-# # умножаем результат этого вызова на 3, что соответствует вычислению произведения длин частей веревки
-# # получаем максимальное произведение длин частей веревки
-#         return 3 * rope_product(n - 3)
-#     return n
